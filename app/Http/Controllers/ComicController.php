@@ -32,7 +32,13 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        $navbar = config('db.navBar');
+        $icons = config('db.icons');
+        $lista1 = config('db.lista1');
+        $lista2 = config('db.lista2');
+        $lista3 = config('db.lista3');
+
+        return view('pages.comics.create',compact('navbar','icons','lista1','lista2','lista3'));
     }
 
     /**

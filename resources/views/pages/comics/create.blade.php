@@ -1,15 +1,15 @@
 @extends('layout.app')
 
 @section('titolo')
- {{$comic['name']}}
+ Laravel Comic | Create
 @endsection
 
 @section('content')
 <section>
-    @include('partials.jumbotron',['image' => $comic['thumb']])
+    @include('partials.jumbotron')
 </section>
 <section>
-    @include('partials.singleComic')
+    @include('partials.formCreate')
 </section>
 <section>
     @include('partials.bluenav')
