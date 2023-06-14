@@ -1,7 +1,7 @@
 <div class="jumbo">
     <div class="current">
         <span>
-            current series
+            {{$title ?? 'Home'}}
         </span>
     </div>
 </div>

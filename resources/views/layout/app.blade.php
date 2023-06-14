@@ -4,9 +4,6 @@
         @include('partials.header')
     </header>
     <main>
-        <section>
-            @include('partials.jumbotron')
-        </section>
         @yield('content')
     </main>
     <footer>

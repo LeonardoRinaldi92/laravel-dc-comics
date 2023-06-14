@@ -6,8 +6,9 @@
 
 @section('content')
 <section>
-    @include('partials.thumbBox')
+    @include('partials.jumbotron')
 </section>
+
 <section>
     @include('partials.bluenav')
 </section>
