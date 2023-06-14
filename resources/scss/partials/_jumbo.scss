@@ -18,3 +18,19 @@
 
     }
 }
+
+.blue-line {
+    height: 10vh;
+    background-color:$blue-dc ;
+}
+.blue-container {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+.blue-image {
+    position: absolute;
+    bottom: 50%;
+    border: 1px solid white;
+    height: 250px;
+}

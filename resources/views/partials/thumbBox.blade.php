@@ -2,17 +2,18 @@
     <div class="box">
         @foreach ($Comics as $item)
         <div class="cardi">
-            <div class="thumb">
-                <img src="{{$item['thumb']}}" alt="Y">
-                <div class="price">
-                    <span>{{ $item['price'] }}</span>
+            <a href="{{route('comics.show', ['comic' => $item->id])}}">
+                <div class="thumb">
+                    <img src="{{$item['thumb']}}" alt="Y">
+                    <div class="price">
+                        <span>{{ $item['price'] }}</span>
+                    </div>
                 </div>
-            </div>   
+            </a>
             <span class="title">
-                {{ $item['title'] }}
+                {{ $item['name'] }}
             </span>
-        </div>
-        
+        </div>    
         @endforeach
     </div>
     <div class="button">

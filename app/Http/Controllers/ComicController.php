@@ -52,9 +52,17 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+    public function show($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+
+        $navbar = config('db.navBar');
+        $icons = config('db.icons');
+        $lista1 = config('db.lista1');
+        $lista2 = config('db.lista2');
+        $lista3 = config('db.lista3');
+
+        return view('pages.comics.show',compact('comic','navbar','icons','lista1','lista2','lista3'));
     }
 
     /**
