@@ -1,0 +1,51 @@
+.top-header {
+    background-color:$blue-dc ;
+    padding:  10px;
+}
+
+.navBar {
+    .col-1 {
+        img {
+            height: 80px;
+        }
+    }
+}
+
+a {
+    text-transform: uppercase;
+    text-align: end;
+}
+
+ul:not(.lista-bottom) {
+    margin-left: 50px;
+    display: flex;
+    li{
+        list-style-type: none;
+        margin-left: 20px;
+        padding: 40px 5px;
+        position: relative;
+        &:hover::after {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            height: 5px;
+            background-color: $blue-dc;
+            bottom: -16px;
+            left: 0;
+            right: 0;
+        }
+        &:hover a {
+            color: $blue-dc;
+        }
+        a{
+            text-decoration: none;
+            color: $nero;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+    }
+}
+.srch {
+    margin-top: 40px;
+}

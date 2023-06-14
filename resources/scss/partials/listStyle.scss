@@ -1,0 +1,55 @@
+.prefooter{
+    height: 400px;
+    width: 100%;
+    background-image: url(../images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    #logoBig{
+        position: absolute;
+        top: -90%;
+        transform: translate(0,+50%);
+        left: 60%;
+    }
+    .list {
+        display: flex;
+        margin-left: 10%;
+        div {
+            margin-right: 20px;
+        }
+    }
+}
+
+.list-title {
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor:default;
+    padding-left: 2rem;
+}
+.lista-bottom {
+    margin-bottom: 1.8rem;
+    margin-top: 0.5rem;
+    li {
+        list-style: none;
+        a {
+            color: white;
+            font-size: 0.8rem;
+            text-decoration: none;
+            opacity: 0.5;
+            text-transform: capitalize;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+            color: $blue-dc;
+        }   
+        }
+    }
+}
+
+.list {
+    margin-top: 50px;
+    margin-left: 10%;
+}

@@ -1,0 +1,16 @@
+@include('partials.head')
+<body>
+    <header>
+        @include('partials.header')
+    </header>
+    <main>
+        <section>
+            @include('partials.jumbotron')
+        </section>
+        @yield('content')
+    </main>
+    <footer>
+        @include('partials.footer')
+    </footer>
+</body>
+</html>

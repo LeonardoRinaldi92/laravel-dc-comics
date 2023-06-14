@@ -1,0 +1,36 @@
+.bluenav{
+    background-color: $blue-dc;
+    width: 100%;
+    .box-size {
+        width: 80%;
+        margin:0 auto;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            flex-basis:18%;
+            cursor: pointer;
+            img {
+                height: 75%;
+            }
+            #icon-img{
+               height: 45%; 
+            }
+            span {
+                text-transform: uppercase;
+                color: white;
+                font-size: 0.9rem;
+                margin-left: 10px;
+                &:hover {
+                    font-size: 1.1rem;
+                }
+            } 
+        }
+    }
+ 
+}

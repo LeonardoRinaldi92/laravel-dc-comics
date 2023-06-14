@@ -1,0 +1,37 @@
+footer{
+    background-color: $grey;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .box {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .signUp {
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            padding: 12px;
+            border: 3px solid $blue-dc;
+            cursor: pointer;
+        }
+        .icon-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            a {
+                margin-right: 20px;
+            }          
+        }
+        .follow {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $blue-dc;                    
+        }
+
+    }
+}
