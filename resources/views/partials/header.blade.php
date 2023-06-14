@@ -12,7 +12,9 @@
 <div class="navBar">
     <div class="container mx-auto justify-content-between row align-items-center">
         <div class="col-1">
-            <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="">
+            <a href="/">
+                <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="">
+            </a>
         </div>
         <div class="col d-flex justify-content-between">
             <ul>

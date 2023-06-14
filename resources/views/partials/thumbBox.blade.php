@@ -1,6 +1,6 @@
 <div class="Thumbbox">
     <div class="box">
-        @foreach ($comics as $item)
+        @foreach ($Comics as $item)
         <div class="cardi">
             <div class="thumb">
                 <img src="{{$item['thumb']}}" alt="Y">

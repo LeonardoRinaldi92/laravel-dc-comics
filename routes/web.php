@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Comic;
+use App\Http\Controllers\ComicController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +24,6 @@ Route::get('/', function () {
     $lista3 = config('db.lista3');
     return view('pages/home',compact('navbar','icons','lista1','lista2','lista3') );
 })->name('home');
+
+Route::resource('/comics', ComicController::class);
 

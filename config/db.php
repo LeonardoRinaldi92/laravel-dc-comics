@@ -222,7 +222,7 @@ return [
         ],
         [
             'menuName'=> "comics",
-            'url'=> "/",
+            'url'=> "/comics",
             'visible'=> true
         ],
         [
