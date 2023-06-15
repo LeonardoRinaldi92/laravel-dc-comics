@@ -49,7 +49,21 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+    
+        $new_Comic = new Comic();
+        $new_Comic->name = $form_data['name'];
+        $new_Comic->description = $form_data['description'];
+        $new_Comic->thumb = $form_data['thumb'];
+        $new_Comic->price = $form_data['price'];
+        $new_Comic->series = $form_data['series'];
+        $new_Comic->sale_date = $form_data['sale_date'];
+        $new_Comic->type = $form_data['type'];
+        $new_Comic->artist = json_encode(explode(', ', $form_data['artist']));
+        $new_Comic->writers = json_encode(explode(', ', $form_data['writers']));
+        $new_Comic->save();
+
+        return redirect()->route('comics.index');
     }
 
     /**
@@ -58,9 +72,9 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
+        //$comic = Comic::findOrFail($id);
 
         $navbar = config('db.navBar');
         $icons = config('db.icons');

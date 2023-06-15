@@ -2,7 +2,7 @@
     <div class="box">
         @foreach ($Comics as $item)
         <div class="cardi">
-            <a href="{{route('comics.show', ['comic' => $item->id])}}">
+            <a href="{{route('comics.show', [$item])}}">
                 <div class="thumb">
                     <img src="{{$item['thumb']}}" alt="Y">
                     <div class="price">
