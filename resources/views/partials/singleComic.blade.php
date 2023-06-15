@@ -31,3 +31,14 @@ COMICS
 
     <button type="submit" class="btn btn-outline-danger" >ELIMINA FUMETTO</button>
 </form>
+
+<script>
+    document.getElementById('delete-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+
+        if (confirm('Sei sicuro sicuro di eliminare il fumetto? Questa azione è irreversibile!')) {
+            this.submit();
+        }
+    });
+</script>
