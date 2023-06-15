@@ -93,7 +93,13 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        $navbar = config('db.navBar');
+        $icons = config('db.icons');
+        $lista1 = config('db.lista1');
+        $lista2 = config('db.lista2');
+        $lista3 = config('db.lista3');
+
+        return view('pages.comics.edit',compact('comic','navbar','icons','lista1','lista2','lista3'));
     }
 
     /**
