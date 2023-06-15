@@ -1,17 +1,71 @@
 .white-single{
     background-color: white;
-    padding: 100px 0px;
-    div{
-        width: 58%;
+    padding: 60px 0px;
+    width: 60%;
+    margin: 0 auto;
+}
+h4 {
+    color: $blue-dc-dark;
+    text-transform: uppercase;
+}
+.price-avaibl {
+    height: 60px;
+    background-color: rgb(85,186,89);
+    width: 100%;
+    border-bottom: 2px solid rgb(64,142,68);
+    font-size: 0.8rem;
+    .col-8 {
+        border-right:2px solid rgb(64,142,68);
+    } 
+}
+.col-8 {
+    p{
+        font-size: 0.8rem;
+    }
+}
+.col-4 {
+    p {
+        text-transform: uppercase;
+        text-align: end;
+        font-size: 0.8rem;
+        color: rgb(99, 99, 99);
+        margin: 0!important;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.light-green {
+color: rgb(165,232,114);
+}
+
+.light-grey-single {
+    background-color: rgb(246,246,246);
+    .container-bottom {
+        padding: 30px 0px;
+        width: 60%;
         margin: 0 auto;
-        h3 {
-            color: $blue-dc-dark;
-            text-transform: uppercase;
+        font-size: 0.8rem;
+        .col-6,
+        .col-5 {
+            h5 {
+                color: $blue-dc-dark;
+            }
+            .row{
+                border-top: 1px solid rgba(128, 128, 128, 0.363);
+                .col-4 {
+                    color: $blue-dc-dark;
+                }
+                .col-8 {
+                    color: $blue-dc;
+                }
+            }
         }
-        .price-avaibl {
-            height: 60px;
-            background-color: greenyellow;
-            width: 100%;
+        .brd-bott {
+            border-bottom: 1px solid rgba(128, 128, 128, 0.363);
+            
         }
+
     }
 }

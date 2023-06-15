@@ -1,27 +1,107 @@
-<div class="white-single row">
-    <div>
-        <h3>
-            {{$comic['name']}}
-        </h3>
-        <div class="price-avaibl">
-
+<div class="white-single">
+    <div class="row">
+        <div class="col-8">
+            <h4>
+                {{$comic['name']}}
+            </h4>
+            <div class="price-avaibl">
+                <div class="row h-100">
+                    <div class="col-8">
+                        <div class="row align-items-center justify-content-between h-100">
+                            <div class="col-6 ps-4">
+                                <span class="light-green">
+                                    <b>
+                                        U.S. Price:
+                                    </b>                         
+                                </span>
+                                <span class="text-white">
+                                    {{$comic['price']}}
+                                </span>
+                            </div>
+                            <div class="col-6 text-end pe-4">
+                                <span class="light-green">
+                                    <b>
+                                        AVAIBLE
+                                    </b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 row align-items-center justify-content-between h-100">
+                        <span class="text-center text-white">
+                            <b>
+                                Check Avaibility &#9660;
+                            </b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-3">
+                {{$comic['description']}}
+            </p> 
         </div>
-        <p>
-            {{$comic['description']}}
-        </p> 
+        <div class="col-4">
+            <p>
+                <b>
+                    Advertisement
+                </b>
+            </p>
+            <img src="{{ Vite::asset('resources/images/adv.jpg') }}" alt="">
+        </div>
     </div>
-
 </div>
 <div class="light-grey-single">
-CHARACTERS
-COMICS
+    <div class="container-bottom row justify-content-between">
+        <div class="col-6 pe-2">
+            <h5>
+                Talent
+            </h5>
+            <div class="row">
+                <div class="col-4 d-flex">
+                    <span class="mt-2">
+                        <b>
+                            Art by:
+                        </b>
+                    </span>
+                </div>
+                <div class="col-8">
+                    <p class="mt-2">
+                    @foreach (json_decode($comic['artist']) as $item) 
+                    <b>
+                    {{$item}},
+                    </b>
+                    @endforeach
+                    </p>
+                </div>
+            </div>
+            <div class="row brd-bott">
+                    <div class="col-4 d-flex">
+                        <span class="mt-2">
+                            <b>
+                                Written by:
+                            </b>
+                        </span>
+                    </div>
+                    <div class="col-8">
+                        <p class="mt-2">
+                        @foreach (json_decode($comic['writers']) as $item) 
+                        <b>
+                        {{$item}},
+                        </b>
+                        @endforeach
+                        </p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-5">
+        
+
+        </div>
+    </div>
 
 
-@foreach (json_decode($comic['artist']) as $item) 
-{{$item}}
-    
-@endforeach
-<a href="{{route ('comics.edit', $comic)}}" class="btn btn-outline-success  mb-5">MODIFICA FUMETTO</a>
+
+<a href="{{route ('comics.edit', $comic)}}" class="btn btn-outline-success ">MODIFICA FUMETTO</a>
 
 
 <form action="{{route ('comics.destroy', $comic)}}" method="POST" id="delete-form">

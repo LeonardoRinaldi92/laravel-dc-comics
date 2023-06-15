@@ -124,7 +124,7 @@ class ComicController extends Controller
         $comic->writers = json_encode(explode(', ', $form_data['writers']));
         $comic->update();
 
-        return redirect()->route('comics.show', $comic)->withFlashSucces('Elemento mofidicato!');
+        return redirect()->route('comics.show', $comic)->with('success', 'Elemento mofidicato!');
     }
 
     /**
