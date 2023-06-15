@@ -1,4 +1,17 @@
 .white-single{
     background-color: white;
-    padding: 100px;
+    padding: 100px 0px;
+    div{
+        width: 58%;
+        margin: 0 auto;
+        h3 {
+            color: $blue-dc-dark;
+            text-transform: uppercase;
+        }
+        .price-avaibl {
+            height: 100px;
+            background-color: greenyellow;
+            width: 100%;
+        }
+    }
 }

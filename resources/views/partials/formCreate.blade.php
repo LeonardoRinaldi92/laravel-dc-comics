@@ -52,7 +52,7 @@
             <div class="form-group">
                 <label for="comics-artist" class="form-label">Artisti</label>
                 <textarea id="comics-artist" class="form-control"
-                placeholder="Inserisci gli artisti separati virigola e spazio" name="artist"></textarea> 
+                placeholder="Inserisci gli artisti separati virigola e spazio" name="artist" ></textarea> 
                 {{-- usare artist[] con l'aggiunta di altri input text per avere piu artisti enon doverci smazzare col json deconde explode e blablabla --}}
             </div>
 
