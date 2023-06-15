@@ -5,9 +5,6 @@
 @endsection
 
 @section('content')
-<section>
-    @include('partials.jumbotron')
-</section>
 
 <section>
     @include('partials.bluenav')
