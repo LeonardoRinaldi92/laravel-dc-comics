@@ -94,23 +94,79 @@
             </div>
         </div>
         <div class="col-5">
-        
-
+        <h5>
+             Specs
+        </h5>
+            <div class="row">
+                <div class="col-4 d-flex">
+                    <span class="mt-2">
+                        <b>
+                            Series:
+                        </b>
+                    </span>
+                </div>
+                <div class="col-8">
+                    <p class="mt-2 text-uppercase">
+                        <b>
+                            {{$comic['series']}}
+                        </b>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 d-flex">
+                    <span class="mt-2">
+                        <b>
+                            U.S. Pice:
+                        </b>
+                    </span>
+                </div>
+                <div class="col-8">
+                    <p class="mt-2 text-uppercase">
+                        <b>
+                            {{$comic['price']}}
+                        </b>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 d-flex">
+                    <span class="mt-2">
+                        <b>
+                            On Sale Date:
+                        </b>
+                    </span>
+                </div>
+                <div class="col-8">
+                    <p class="mt-2 text-uppercase">
+                        <b>
+                        {{$comic['sale_date']}}
+                        </b>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="bottom-bottom mt-5 pb-5">
+        <div class="row justify-content-end">
+            <div class="col-3">
+                <a href="{{route ('comics.edit', $comic)}}" class="btn btn-outline-success ">MODIFICA FUMETTO</a>
+            </div>
+            <div class="col-3">
+                <form action="{{route ('comics.destroy', $comic)}}" method="POST" id="delete-form">
+                
+                    @csrf
+                    @method('DELETE')
+                
+                    <button type="submit" class="btn btn-outline-danger" >ELIMINA FUMETTO</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
-<a href="{{route ('comics.edit', $comic)}}" class="btn btn-outline-success ">MODIFICA FUMETTO</a>
-
-
-<form action="{{route ('comics.destroy', $comic)}}" method="POST" id="delete-form">
-
-    @csrf
-    @method('DELETE')
-
-    <button type="submit" class="btn btn-outline-danger" >ELIMINA FUMETTO</button>
-</form>
 
 <script>
     document.getElementById('delete-form').addEventListener('submit', function (event) {

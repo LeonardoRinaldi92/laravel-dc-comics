@@ -1,3 +1,4 @@
+@inject('carbon', 'Carbon\Carbon')
 <!DOCTYPE html>
 <html lang="en">
 <head>
