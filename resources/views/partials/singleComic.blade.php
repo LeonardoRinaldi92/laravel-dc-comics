@@ -18,4 +18,5 @@
 {{$item}}
     
 @endforeach
+<a href="{{route ('comics.edit', $comic)}}" class="btn btn-outline-success  mb-5">MODIFICA FUMETTO</a>
 </div>
