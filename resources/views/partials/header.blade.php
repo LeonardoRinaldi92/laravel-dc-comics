@@ -16,7 +16,7 @@
                 <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="">
             </a>
         </div>
-        <div class="col d-flex justify-content-between">
+        <div class="col-11 d-flex justify-content-between">
             <ul>
                 @foreach ($navbar as $item)
                 <li>
