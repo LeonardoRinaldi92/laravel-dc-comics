@@ -4,6 +4,7 @@
         @include('partials.header')
     </header>
     <main>
+        @include('partials.messages')
         @yield('content')
     </main>
     <footer>

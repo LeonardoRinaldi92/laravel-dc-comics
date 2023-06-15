@@ -19,4 +19,10 @@
     
 @endforeach
 <a href="{{route ('comics.edit', $comic)}}" class="btn btn-outline-success  mb-5">MODIFICA FUMETTO</a>
-</div>
+<form action="{{route ('comics.destroy', $comic)}}" method="POST">
+
+    @csrf
+    @method('DELETE')
+
+    <button type="submit" class="btn btn-outline-danger">ELIMINA FUMETTO</button>
+</form>

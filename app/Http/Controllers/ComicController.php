@@ -111,7 +111,20 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+
+        $comic->name = $form_data['name'];
+        $comic->description = $form_data['description'];
+        $comic->thumb = $form_data['thumb'];
+        $comic->price = $form_data['price'];
+        $comic->series = $form_data['series'];
+        $comic->sale_date = $form_data['sale_date'];
+        $comic->type = $form_data['type'];
+        $comic->artist = json_encode(explode(', ', $form_data['artist']));
+        $comic->writers = json_encode(explode(', ', $form_data['writers']));
+        $comic->update();
+
+        return redirect()->route('comics.show', $comic)->withFlashSucces('Elemento mofidicato!');
     }
 
     /**
@@ -122,6 +135,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
