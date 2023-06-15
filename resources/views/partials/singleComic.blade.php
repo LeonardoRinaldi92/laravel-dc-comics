@@ -106,7 +106,7 @@
                     </span>
                 </div>
                 <div class="col-8">
-                    <p class="mt-2 text-uppercase">
+                    <p class="mt-2 text-uppercase text-black-50">
                         <b>
                             {{$comic['series']}}
                         </b>
@@ -122,7 +122,7 @@
                     </span>
                 </div>
                 <div class="col-8">
-                    <p class="mt-2 text-uppercase">
+                    <p class="mt-2 text-uppercase text-black-50">
                         <b>
                             {{$comic['price']}}
                         </b>
@@ -138,9 +138,9 @@
                     </span>
                 </div>
                 <div class="col-8">
-                    <p class="mt-2 text-uppercase">
+                    <p class="mt-2 text-uppercase text-black-50">
                         <b>
-                        {{$comic['sale_date']}}
+                        {{ date('M d Y', strtotime($comic->sale_date)) }}
                         </b>
                     </p>
                 </div>
@@ -148,7 +148,7 @@
         </div>
     </div>
     <div class="bottom-bottom mt-5 pb-5">
-        <div class="row justify-content-end">
+        <div class="row justify-content-end ">
             <div class="col-3">
                 <a href="{{route ('comics.edit', $comic)}}" class="btn btn-outline-success ">MODIFICA FUMETTO</a>
             </div>
