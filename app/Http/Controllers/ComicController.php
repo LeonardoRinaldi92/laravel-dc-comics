@@ -50,7 +50,6 @@ class ComicController extends Controller
      */
     public function store(StoreComicRequest $request)
     {
-        dd($request->validated());
 
         $form_data = $request->all();
     

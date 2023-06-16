@@ -10,83 +10,83 @@
             <div class="form-group">
                 <label for="comics-name" class="form-label">Titolo</label>
                 <input type="text" required max="255"  id="comics-name" class="form-control"
-                placeholder="Inserisci il titolo del fumetto" name="name">
+                placeholder="Inserisci il titolo del fumetto" name="name" value="{{ old('name') ?? old('name')}}">
                 @error('name')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-description" class="form-label">Descrizione</label>
                 <textarea id="comics-description" class="form-control"
-                placeholder="Inserisci la descrizione del fumetto" name="description"></textarea>
+                placeholder="Inserisci la descrizione del fumetto" name="description">{{ old('description')}}</textarea>
                 @error('description')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-thumb" class="form-label">Thumb</label>
                 <input type="text" required max="255" id="comics-thumb" class="form-control"
-                placeholder="Inserisci il link dell'immagine del fumetto" name="thumb">
+                placeholder="Inserisci il link dell'immagine del fumetto" name="thumb" value="{{ old('thumb')}}">
                 @error('thumb')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-price" class="form-label">price</label>
                 <input type="text" required max="20" id="comics-price" class="form-control"
-                placeholder="Inserisci il prezzo" name="price">
+                placeholder="Inserisci il prezzo" name="price" value="{{ old('price')}}">
                 @error('price')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-series" class="form-label">series</label>
                 <input type="text" required max="50" id="comics-series" class="form-control"
-                placeholder="Inserisci il prezzo" name="series">
+                placeholder="Inserisci il prezzo" name="series" value="{{ old('series')}}">
                 @error('series')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-sale_date" class="form-label">sale_date</label>
                 <input type="date" required id="comics-sale_date" class="form-control" name="sale_date"
-                    min="1900-01-01">
+                    min="1900-01-01" value="{{ old('sale_date')}}">
                 @error('sale_date')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-type" class="form-label">type</label>
                 <input type="text" required max="255" id="comics-type" class="form-control"
-                placeholder="Inserisci il tipo" name="type">
+                placeholder="Inserisci il tipo" name="type" value="{{ old('type')}}">
                 @error('type')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-artist" class="form-label">Artisti</label>
                 <textarea id="comics-artist" required class="form-control"
-                placeholder="Inserisci gli artisti separati virigola e spazio" name="artist" ></textarea> 
+                placeholder="Inserisci gli artisti separati virigola e spazio" name="artist">{{ old('artist')}}</textarea> 
                 {{-- usare artist[] con l'aggiunta di altri input text per avere piu artisti enon doverci smazzare col json deconde explode e blablabla --}}
                 @error('artist')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-writers" class="form-label">Writers</label>
                 <textarea id="comics-writers" required class="form-control"
-                placeholder="Inserisci gli scrittori separati da virgola e spazio" name="writers"></textarea>
+                placeholder="Inserisci gli scrittori separati da virgola e spazio" name="writers">{{ old('writers')}}</textarea>
                             {{-- usare writers[] con l'aggiunta di altri input text per avere piu artisti enon doverci smazzare col json deconde explode e blablabla --}}
                 @error('writers')
-                    <span>{{$message}}</span>
+                    <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
             </div>
 

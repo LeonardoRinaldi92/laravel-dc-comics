@@ -31,8 +31,8 @@ class StoreComicRequest extends FormRequest
             'series' => ['required', 'string', 'max:50'],
             'sale_date' => ['required', 'date'],
             'type' => ['required', 'string', 'max:255'],
-            'artist' => ['required', 'string'],
-            'writers' => ['required', 'string']
+            'artist' => ['required', 'string', 'regex:/^[a-zàèéìòù ,]+$/'],
+            'writers' => ['required', 'string', 'regex:/^[a-zàèéìòù ,]+$/']
         ];
     }
 
@@ -43,14 +43,14 @@ class StoreComicRequest extends FormRequest
     //  *
     //  * @return array<string, string>
     //  */
-    // public function messages(): array
-    // {
-    //     return [
-    //         'title.required' => 'A title is required',
-    //         'body.required' => 'A message is required',
-    //     ];
-    // }
-
+    public function messages(): array
+    {
+        return [
+            'artist.regex' => ':attribute non è corretto, ogni persona deve essere divisa da virgola "," e uno spazio',
+            'writers.regex' => ':attribute non è corretto, ogni persona deve essere divisa da virgola "," e uno spazio',
+        ];
+    }
+    
 
 
     //ATTRUBUTI CUSTOM
@@ -69,8 +69,8 @@ class StoreComicRequest extends FormRequest
            'series' => 'La serie del fumetto',
            'sale_date' => 'La data di vendita del fumetto',
            'type' => 'Il Tipo di fumetto',
-           'artist' => 'I Disegnatori del fumetto',
-           'writers' => 'Gli Scrittori del fumetto'
+           'artist' => 'Artisti del fumetto',
+           'writers' => 'Scrittori del fumetto'
 
        ];
    }
