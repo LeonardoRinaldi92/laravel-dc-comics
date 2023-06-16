@@ -9,58 +9,85 @@
 
             <div class="form-group">
                 <label for="comics-name" class="form-label">Titolo</label>
-                <input type="text" id="comics-name" class="form-control"
+                <input type="text" required max="255"  id="comics-name" class="form-control"
                 placeholder="Inserisci il titolo del fumetto" name="name">
+                @error('name')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-description" class="form-label">Descrizione</label>
                 <textarea id="comics-description" class="form-control"
                 placeholder="Inserisci la descrizione del fumetto" name="description"></textarea>
+                @error('description')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-thumb" class="form-label">Thumb</label>
-                <input type="text" id="comics-thumb" class="form-control"
+                <input type="text" required max="255" id="comics-thumb" class="form-control"
                 placeholder="Inserisci il link dell'immagine del fumetto" name="thumb">
+                @error('thumb')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-price" class="form-label">price</label>
-                <input type="text" id="comics-price" class="form-control"
+                <input type="text" required max="20" id="comics-price" class="form-control"
                 placeholder="Inserisci il prezzo" name="price">
+                @error('price')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-series" class="form-label">series</label>
-                <input type="text" id="comics-series" class="form-control"
+                <input type="text" required max="50" id="comics-series" class="form-control"
                 placeholder="Inserisci il prezzo" name="series">
+                @error('series')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-sale_date" class="form-label">sale_date</label>
-                <input type="date" id="comics-sale_date" class="form-control" name="sale_date"
+                <input type="date" required id="comics-sale_date" class="form-control" name="sale_date"
                     min="1900-01-01">
+                @error('sale_date')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-type" class="form-label">type</label>
-                <input type="text" id="comics-type" class="form-control"
+                <input type="text" required max="255" id="comics-type" class="form-control"
                 placeholder="Inserisci il tipo" name="type">
+                @error('type')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-artist" class="form-label">Artisti</label>
-                <textarea id="comics-artist" class="form-control"
+                <textarea id="comics-artist" required class="form-control"
                 placeholder="Inserisci gli artisti separati virigola e spazio" name="artist" ></textarea> 
                 {{-- usare artist[] con l'aggiunta di altri input text per avere piu artisti enon doverci smazzare col json deconde explode e blablabla --}}
+                @error('artist')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="comics-writers" class="form-label">Writers</label>
-                <textarea id="comics-writers" class="form-control"
+                <textarea id="comics-writers" required class="form-control"
                 placeholder="Inserisci gli scrittori separati da virgola e spazio" name="writers"></textarea>
-                                {{-- usare writers[] con l'aggiunta di altri input text per avere piu artisti enon doverci smazzare col json deconde explode e blablabla --}}
+                            {{-- usare writers[] con l'aggiunta di altri input text per avere piu artisti enon doverci smazzare col json deconde explode e blablabla --}}
+                @error('writers')
+                    <span>{{$message}}</span>
+                @enderror
             </div>
 
             <button type="submit" class="my-3 btn btn-primary">Crea nuovo Comics </button>
