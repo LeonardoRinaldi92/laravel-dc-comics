@@ -13,7 +13,7 @@ class UpdateComicRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true; // le autorizzazioni le vediamo lunedi(credo..) altrimenti false
     }
 
     /**
@@ -24,7 +24,51 @@ class UpdateComicRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => ['required', 'string', 'max:255'],
+            'description' => ['string'],
+            'thumb' => ['required', 'string', 'max:255'],
+            'price' => ['required', 'string', 'max:20'],
+            'series' => ['required', 'string', 'max:50'],
+            'sale_date' => ['required', 'date'],
+            'type' => ['required', 'string', 'max:255'],
+            'artist' => ['required', 'string', 'regex:/^[a-zA-Zàèéìòù ,-]+(, )?$/'],
+            'writers' => ['required', 'string', 'regex:/^[a-zA-Zàèéìòù ,-]+(, )?$/']
         ];
     }
+
+     //MESSAGGI CUSTOM
+    // /**
+    //  * Get the error messages for the defined validation rules.
+    //  *
+    //  * @return array<string, string>
+    //  */
+    public function messages(): array
+    {
+        return [
+            'artist.regex' => ':attribute non è corretto, ogni persona deve essere divisa da virgola "," e uno spazio non sono ammessi caratteri []{}()<>|\/~^`\"\',;:?%&*@#_-=+"',
+            'writers.regex' => ':attribute non è corretto, ogni persona deve essere divisa da virgola "," e uno spazio non sono ammessi caratteri []{}()<>|\/~^`\"\',;:?%&*@#_-=+"',
+        ];
+    }
+
+     //ATTRUBUTI CUSTOM
+    // /**
+    //  * Get the error messages for the defined validation rules.
+    //  *
+    //  * @return array<string, string>
+    //  */
+   public function attributes(): array
+   {
+       return [
+           'name' => 'Il Titolo del fumetto',
+           'description' => 'La Descrizione del fumetto',
+           'thumb' => 'Il link dell\'immagine del fumetto',
+           'price' => 'Il prezzo del fumetto',
+           'series' => 'La serie del fumetto',
+           'sale_date' => 'La data di vendita del fumetto',
+           'type' => 'Il Tipo di fumetto',
+           'artist' => 'Artisti del fumetto',
+           'writers' => 'Scrittori del fumetto'
+
+       ];
+   }
 }

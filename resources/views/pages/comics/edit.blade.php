@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('titolo')
- Laravel Comic | Create
+ Laravel Comic | Edit :{{$comic->name}}
 @endsection
 
 @section('content')

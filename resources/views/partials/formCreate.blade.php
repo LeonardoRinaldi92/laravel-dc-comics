@@ -10,7 +10,7 @@
             <div class="form-group">
                 <label for="comics-name" class="form-label">Titolo</label>
                 <input type="text" required max="255"  id="comics-name" class="form-control"
-                placeholder="Inserisci il titolo del fumetto" name="name" value="{{ old('name') ?? old('name')}}">
+                placeholder="Inserisci il titolo del fumetto" name="name" value="{{ old('name')}}">
                 @error('name')
                     <span style="color: red; text-transform: uppercase">{{$message}}</span>
                 @enderror
